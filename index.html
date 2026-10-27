@@ -1,12 +1,94 @@
-<!doctype html>
-<html lang="km">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#6d28d9" />
-    <meta name="description" content="AI Khmer Drama — បកប្រែវីដេអូជាភាសាខ្មែរ" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <title>AI KHMER DRAMA</title>
-  </head>
-  <body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body>
+<!DOCTYPE html><html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI KHMER DRAMA PRO FREE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 16px;
+    }
+    h1 {
+      text-align: center;
+      color: #38bdf8;
+      font-size: 25px;
+    }
+    p { line-height: 1.8; }
+    label { display: block; margin-top: 16px; }
+    input, select, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      background: #0ea5e9;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .note {
+      color: #fbbf24;
+      background: #334155;
+      padding: 12px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI KHMER DRAMA PRO FREE</h1>
+    <p>បកប្រែរឿងភាសាចិន និងអង់គ្លេស ទៅជាភាសាខ្មែរ</p><label>ជ្រើសរើសវីដេអូ</label>
+<input type="file" id="video" accept="video/*">
+
+<label>ភាសាដើម</label>
+<select id="language">
+  <option value="zh">ភាសាចិន</option>
+  <option value="en">ភាសាអង់គ្លេស</option>
+</select>
+
+<label>សំឡេង AI</label>
+<select id="voice">
+  <option value="female">សំឡេងស្រីខ្មែរ</option>
+  <option value="male">សំឡេងប្រុសខ្មែរ</option>
+</select>
+
+<button onclick="startTranslate()">ចាប់ផ្ដើមបកប្រែ</button>
+
+<p id="status" class="note">
+  សូមជ្រើសរើសវីដេអូជាមុនសិន។
+</p>
+
+<p class="note">
+  ចំណាំ៖ នេះជាផ្នែកបង្ហាញសាកល្បង។ មុខងារបកប្រែពិត និងបង្កើតសំឡេង AI ត្រូវការភ្ជាប់ Backend បន្ថែម។
+</p>
+
+  </div>  <script>
+    function startTranslate() {
+      const video = document.getElementById('video').files[0];
+      const status = document.getElementById('status');
+
+      if (!video) {
+        status.textContent = 'សូមជ្រើសរើសវីដេអូជាមុនសិន។';
+        return;
+      }
+
+      status.textContent =
+        'អ្នកបានជ្រើសរើសវីដេអូ ' + video.name +
+        '។ មុខងារបកប្រែពិតមិនទាន់បានភ្ជាប់ទេ។';
+    }
+  </script></body>
 </html>
